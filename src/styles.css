@@ -1,0 +1,14 @@
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body baseline */
+body {
+  font-family: system-ui, Arial, sans-serif;
+  background-color: #0b0d10; /* dark background */
+  color: #e8eaed;            /* light text */
+  line-height: 1.5;
+}
