@@ -120,6 +120,9 @@
 .project-card:hover {
     background: #c23d1a;
 }
+.project-card:hover img {
+    background: #c23d1a;
+}
 
 .project-card img {
   width: 400px;
@@ -127,7 +130,6 @@
   object-fit: cover;
   border-radius: 8px;
   background: #2b1a13;
-  border: 2px solid #2b1a13;
 }
 
 .project-card p {
