@@ -6,11 +6,11 @@ export default function Home() {
         <div className="home-page">
             <div className="hero-section">
                 <h1>Creative media & design that makes brands stand out.</h1>
-                <h2>I design logos, edit photos, and craft media content so your brand looks as good as it deserves to.</h2>
+                <h2>Affordable design solutions: logos, photo editing, social content, and event banners that connect with your audience.</h2>
                 <p>See my <Link to="/Portfolio">work</Link>, or get in touch <Link to="/Contact">now!</Link></p>
                 <section>
                     <h2> About Me </h2>
-                    <p>Hi, I’m Alex — I turn ideas into visuals that shine. Whether it’s a new logo, editing your media, or creating branded content, I love helping people show off their business at its best. I keep things simple, affordable, and fast so you can focus on growing while I handle the creative side.</p>
+                    <p>Hi, I’m Matthew — I love turning ideas into visuals that shine. Whether it’s designing a new logo, editing photos, or producing social posts and event banners, I help businesses build a strong presence online and offline. I focus on quick turnaround, affordable rates, and designs that fit your unique brand style.</p>
                 </section>
             </div>
             <div className="project-overview">
