@@ -1,0 +1,228 @@
+/* Layout for the home page */
+.home-page {
+  max-width: 90%;
+  margin: 2rem auto;
+  padding: 0rem 0rem;
+  background: #e9ceb2; /* light beige from logo */
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44, 29, 19, 0.08);
+}
+
+/* Hero section */
+.hero-section {
+  text-align: center;
+  max-width: 100%;
+  height: auto;
+  border-radius: 18px;
+  padding: 2rem;
+  background-color: #c23d1a;
+}
+
+.hero-section h1 {
+  color: #2b1a13; /* warm red/orange */
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+}
+
+.hero-section h2 {
+  color: #e9ceb2; /* deep brown */
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.hero-section p {
+  color: #e9ceb2;
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-section a {
+  color: #2b1a13;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.hero-section a:hover {
+  color: #e6b97a;
+}
+
+/* About section inside hero */
+.hero-section section {
+  background: #2b1a13; /* match the page's cream background */
+  border-radius: 12px;
+  padding: 1.2rem 1rem;
+  margin: 1.5rem auto 0 auto;
+  max-width: 80%;
+  box-shadow: 0 2px 8px rgba(44, 29, 19, 0.04);
+}
+.hero-section section h2 {
+  color: #c23d1a;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+.hero-section section p {
+  color: #e9ceb2;
+  font-size: 1rem;
+}
+
+/* Project Overview */
+.project-overview {
+  margin: 2rem 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e9ceb2;
+}
+
+.project-overview h2 {
+  color: #e9ceb2;
+  background-color: #2b1a13;
+  width: 100%;
+  padding: 0.5rem 0;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-radius: 18px;
+}
+
+/* Add a flex container for project cards */
+.project-cards-row {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.project-card {
+  background: #2b1a13;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  box-shadow: 0 2px 8px rgba(44, 29, 19, 0.06);
+  margin-bottom: 0;
+  min-width: 160px;
+  max-width: 400px;
+  min-height: 160px;
+  max-height: 400px;
+  flex: 1 1 160px;
+  transition: background 0.2s;
+}
+
+.project-card:hover {
+    background: #c23d1a;
+}
+
+.project-card img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #2b1a13;
+  border: 2px solid #2b1a13;
+}
+
+.project-card p {
+  color: #e9ceb2;
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Services Overview */
+.services-overview {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.services-overview h2 {
+  color: #e9ceb2;
+  background-color: #2b1a13;
+  width: 100%;
+  border-radius: 18px;
+  font-size: 1.4rem;
+  padding: 0.5rem 0;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Services grid for 2x2 layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #2b1a13;
+  border-radius: 10px;
+  padding: 1rem 1rem;
+  box-shadow: 0 2px 8px rgba(44, 29, 19, 0.06);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-align: left;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;;
+}
+
+.service-card:hover {
+    background: #c23d1a;
+}
+
+.service-img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #fff8f3;
+  border: 2px solid #2b1a13;
+  flex-shrink: 0;
+}
+
+.service-card h3 {
+  color: #e9ceb2;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  transition: color 0.2s;
+}
+
+.service-card:hover h3 {
+  color: #2b1a13;
+}
+
+.service-card p {
+  color: #c23d1a;
+  font-size: 1rem;
+  margin: 0;
+  transition: color 0.2s;
+}
+
+.service-card:hover p {
+  color: #e9ceb2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .project-cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .service-card {
+    flex-direction: row;
+  }
+}

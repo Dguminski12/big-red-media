@@ -8,8 +8,8 @@
 /* Body baseline */
 body {
   font-family: system-ui, Arial, sans-serif;
-  background-color: #2b1a13; /* deep brown from logo border */
-  color: #f6e7d7;            /* light beige from logo background */
+  background-color: #e9ceb2; /* deep brown from logo border */
+  color: #2b1a13;            /* light beige from logo background */
   line-height: 1.5;
 }
 
@@ -32,14 +32,16 @@ header img {
 
 /* Menu button styles */
 .menu-btn {
-  background: #f6e7d7;       /* light beige */
+  background: #e9ceb2;       /* light beige */
   border: none;
-  color: #c23d1a;            /* warm red/orange */
+  color: #2b1a13;            /* warm red/orange */
   font-size: 1.1rem;
+  font-weight: 500;
   padding: 0.5rem 1.2rem;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
+  text-decoration: none;
 }
 
 .menu-btn:hover {
