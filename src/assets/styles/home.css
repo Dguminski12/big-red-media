@@ -89,54 +89,6 @@
   border-radius: 18px;
 }
 
-/* Add a flex container for project cards */
-.project-cards-row {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.project-card {
-  background: #2b1a13;
-  border-radius: 10px;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
-  box-shadow: 0 2px 8px rgba(44, 29, 19, 0.06);
-  margin-bottom: 0;
-  min-width: 160px;
-  max-width: 400px;
-  min-height: 160px;
-  max-height: 400px;
-  flex: 1 1 160px;
-  transition: background 0.2s;
-}
-
-.project-card:hover {
-    background: #c23d1a;
-}
-.project-card:hover img {
-    background: #c23d1a;
-}
-
-.project-card img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-  background: #2b1a13;
-}
-
-.project-card p {
-  color: #e9ceb2;
-  font-size: 1rem;
-  text-align: center;
-}
 
 /* Services Overview */
 .services-overview {

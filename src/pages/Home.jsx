@@ -1,5 +1,7 @@
 import "../assets/styles/home.css"
 import { Link } from "react-router-dom";
+import { projects } from "../data/projects";
+import ProjectCard from "../components/ProjectCard";
 
 export default function Home() {
     return (
@@ -13,7 +15,7 @@ export default function Home() {
                     <p>Hi, I’m Matthew — I love turning ideas into visuals that shine. Whether it’s designing a new logo, editing photos, or producing social posts and event banners, I help businesses build a strong presence online and offline. I focus on quick turnaround, affordable rates, and designs that fit your unique brand style.</p>
                 </section>
             </div>
-            <div className="project-overview">
+            {/* <div className="project-overview">
                 <h2> Featured Projects </h2>
                 <div className="project-cards-row">
                     <div className="project-card">
@@ -28,6 +30,20 @@ export default function Home() {
                         <img alt="Project 3" />
                         <p>Project 3</p>
                     </div>
+                </div>
+            </div> */}
+            <div className="home-featured">
+                <h2> Featured Projects </h2>
+                <div className="grid">
+                    {projects.slice(0, 3).map((p) => (
+                        <ProjectCard key={p.id} project={p} />
+                    ))}
+                </div>
+
+                <div className="view-all">
+                    <Link to="/Portfolio" className="btn btn-outline">
+                        View all projects
+                    </Link>
                 </div>
             </div>
             <div className="services-overview">
