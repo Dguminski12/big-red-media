@@ -90,9 +90,11 @@ footer {
 .grid {
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  margin: 0 auto;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-items: center;    /* This centers each card horizontally in its grid cell */
+  align-items: start;
+  margin: 1rem auto;
+  max-width: 80%;
 }
 
 /* --- Card styling --- */
@@ -196,4 +198,28 @@ footer {
 .view-all {
   margin-top: 20px;
   text-align: center;
+}
+
+
+/* Portfolio page specific styles */
+
+.work-page {
+  margin-top: 48px;
+}
+
+.work-page h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.work-intro {
+  color: var(--muted, #9aa0a6);
+  margin-bottom: 24px;
+}
+
+.home-featured,
+.home-page {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
