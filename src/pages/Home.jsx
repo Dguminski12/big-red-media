@@ -1,4 +1,5 @@
-import "../assets/styles/home.css"
+import "../assets/styles/home.css";
+import "../assets/styles/cards.css";
 import { Link } from "react-router-dom";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
@@ -15,23 +16,6 @@ export default function Home() {
                     <p>Hi, I’m Matthew — I love turning ideas into visuals that shine. Whether it’s designing a new logo, editing photos, or producing social posts and event banners, I help businesses build a strong presence online and offline. I focus on quick turnaround, affordable rates, and designs that fit your unique brand style.</p>
                 </section>
             </div>
-            {/* <div className="project-overview">
-                <h2> Featured Projects </h2>
-                <div className="project-cards-row">
-                    <div className="project-card">
-                        <img alt="Project 1" />
-                        <p>Project 1</p>
-                    </div>
-                    <div className="project-card">
-                        <img alt="Project 2" />
-                        <p>Project 2</p>
-                    </div>
-                    <div className="project-card">
-                        <img alt="Project 3" />
-                        <p>Project 3</p>
-                    </div>
-                </div>
-            </div> */}
             <div className="home-featured">
                 <h2> Featured Projects </h2>
                 <div className="grid">

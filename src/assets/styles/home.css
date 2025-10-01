@@ -68,17 +68,15 @@
   font-size: 1rem;
 }
 
-/* Project Overview */
-.project-overview {
+/* --- Featured Work section --- */
+
+.home-featured {
   margin: 2rem 0;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-color: #e9ceb2;
 }
 
-.project-overview h2 {
+.home-featured h2 {
   color: #e9ceb2;
   background-color: #2b1a13;
   width: 100%;

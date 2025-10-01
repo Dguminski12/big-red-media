@@ -1,0 +1,153 @@
+/* --- Grid layout for cards --- */
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  justify-items: center;    /* This centers each card horizontally in its grid cell */
+  align-items: start;
+  margin: 1rem auto;
+  max-width: 80%;
+}
+
+/* --- Card styling --- */
+.card {
+  background: #2b1a13;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: background 0.2s, transform 0.1s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 8px rgba(44, 29, 19, 0.08);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px 8px 0 0;
+  background: #fff8f3;
+  border-bottom: 2px solid #c23d1a22;
+}
+
+.card-body {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-title {
+  margin: 0 0 8px 0;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #e9ceb2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card-text {
+  margin: 0 0 10px 0;
+  color: #c23d1a;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.card-tags {
+  margin-top: auto;
+  font-size: 0.85rem;
+  color: #e6b97a;
+}
+
+/* Hover effect */
+.card:hover {
+  background: #c23d1a;
+  transform: translateY(-2px);
+}
+
+.card:hover .card-title {
+  color: #2b1a13;
+}
+
+.card:hover .card-text {
+  color: #e9ceb2;
+}
+
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  background-color: #c23d1a;
+  color: #2b1a13;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  cursor: pointer;
+}
+
+.card:hover .btn {
+  background-color: #2b1a13;
+  color: #e9ceb2;
+}
+
+
+/* outline style */
+.btn-outline {
+  border: 1px solid #2b1a13;
+  color: #e9ceb2;
+}
+
+.btn-outline:hover {
+  background: #2b1a13;
+  color: #c23d1a; /* dark text for contrast */
+}
+
+/* view-all wrapper */
+.view-all {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Remove underline and blue color from links in card titles and buttons */
+.card-title a,
+.card-title a:link,
+.card-title a:visited,
+.card-title a:active,
+.card-title a:focus,
+.card-title a:hover,
+.btn a,
+.btn a:link,
+.btn a:visited,
+.btn a:active,
+.btn a:focus,
+.btn a:hover {
+  color: #e9ceb2 !important;
+  text-decoration: none !important;
+}
+
+.btn,
+.btn:link,
+.btn:visited,
+.btn:active,
+.btn:focus,
+.btn:hover {
+  color: #2b1a13 !important;
+  text-decoration: none !important;
+  background-color: #c23d1a;
+}
+
+/* On hover, match your brand colors */
+.card:hover .card-title a {
+  color: #2b1a13 !important;
+}
+
+.card:hover .btn,
+.card:hover .btn a {
+  background-color: #2b1a13 !important;
+  color: #e9ceb2 !important;
+}

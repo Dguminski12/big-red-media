@@ -6,6 +6,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
+import Project from "./pages/Project";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element= {<Home />} />
           <Route path="/Portfolio" element= {<Portfolio />} />
+          <Route path="/Portfolio/:id" element={<Project />} />
           <Route path="/Contact" element= {<Contact />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

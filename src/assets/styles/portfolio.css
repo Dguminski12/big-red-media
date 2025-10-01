@@ -24,3 +24,13 @@
   text-align: center;
   box-shadow: 0 2px 8px rgba(44, 29, 19, 0.04);
 }
+
+.work-page {
+  margin-top: 48px;
+}
+
+.home-featured,
+.home-page {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
