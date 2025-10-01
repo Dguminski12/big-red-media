@@ -18,6 +18,7 @@ export default function ProjectCard({ project }) {
         <p className="card-text">{blurb}</p>
         <div className="card-tags">{Array.isArray(tags) ? tags.join(" • ") : tags}</div>
         {url && (
+          <Link to={`/Portfolio/${id}`} className="card-link"> 
           <a
             className="btn"
             href={url}
@@ -25,8 +26,9 @@ export default function ProjectCard({ project }) {
             rel="noreferrer"
             style={{ marginTop: 10, display: "inline-block" }}
           >
-           <Link to={`/Portfolio/${id}`} className="card-link"> View </Link>
+            View
           </a>
+          </Link>
         )}
       </div>
     </article>

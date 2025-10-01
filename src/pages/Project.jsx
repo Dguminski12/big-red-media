@@ -12,14 +12,14 @@ export default function Project() {
       <section className="project">
         <h1>Project not found</h1>
         <p>We couldn’t find that case study.</p>
-        <Link className="btn btn-outline" to="/work">Back to Work</Link>
+        <Link className="btn btn-outline" to="/work">Back to Portfolio</Link>
       </section>
     );
   }
 
   return (
     <section className="project">
-      <Link className="back-link" to="/work">← Back to Work</Link>
+      <Link className="back-link" to="/Portfolio">← Back to Portfolio</Link>
 
       <h1 className="project-title">{project.title}</h1>
       <p className="project-meta">

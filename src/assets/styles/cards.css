@@ -78,14 +78,18 @@
 
 /* --- Buttons --- */
 .btn {
-  display: inline-block;
-  padding: 10px 16px;
+  display: block;              /* makes button take full width */
+  width: 100%;                 /* fill card width */
+  box-sizing: border-box;
+  padding: 12px 0;             /* taller button */
   border-radius: 8px;
   font-weight: 600;
+  font-size: 1rem;             /* consistent font size */
   text-align: center;
   text-decoration: none;
   background-color: #c23d1a;
   color: #2b1a13;
+  margin: 12px 0 0 0;          /* space above button */
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
 }
