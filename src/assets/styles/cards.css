@@ -28,7 +28,7 @@
   display: block;
   border-radius: 8px 8px 0 0;
   background: #fff8f3;
-  border-bottom: 2px solid #c23d1a22;
+  border-bottom: 2px solid #e7551222;
 }
 
 .card-body {
@@ -49,7 +49,7 @@
 
 .card-text {
   margin: 0 0 10px 0;
-  color: #c23d1a;
+  color: #e75512;
   font-size: 0.95rem;
   line-height: 1.4;
   text-align: center;
@@ -63,7 +63,7 @@
 
 /* Hover effect */
 .card:hover {
-  background: #c23d1a;
+  background: #e75512;
   transform: translateY(-2px);
 }
 
@@ -87,7 +87,7 @@
   font-size: 1rem;             /* consistent font size */
   text-align: center;
   text-decoration: none;
-  background-color: #c23d1a;
+  background-color: #e75512;
   color: #2b1a13;
   margin: 12px 0 0 0;          /* space above button */
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
@@ -108,7 +108,7 @@
 
 .btn-outline:hover {
   background: #2b1a13;
-  color: #c23d1a; /* dark text for contrast */
+  color: #e75512; /* dark text for contrast */
 }
 
 /* view-all wrapper */
@@ -142,7 +142,7 @@
 .btn:hover {
   color: #2b1a13 !important;
   text-decoration: none !important;
-  background-color: #c23d1a;
+  background-color: #e75512;
 }
 
 /* On hover, match your brand colors */

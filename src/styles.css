@@ -15,7 +15,7 @@ body {
 
 /* Header styles */
 header {
-  background-color: #c23d1a; /* warm red/orange from logo border */
+  background-color: #e75512; /* warm red/orange from logo border */
   padding: 0rem 1rem;
   display: flex;
   align-items: center;
@@ -57,7 +57,7 @@ header img {
 
 /* Footer styles */
 footer {
-  background-color: #c23d1a; /* warm red/orange */
+  background-color: #e75512; /* warm red/orange */
   text-align: center;
   padding: 1rem;
   position: relative;

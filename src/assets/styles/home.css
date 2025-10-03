@@ -15,7 +15,7 @@
   height: auto;
   border-radius: 18px;
   padding: 2rem;
-  background-color: #c23d1a;
+  background-color: #e75512;
 }
 
 .hero-section h1 {
@@ -59,7 +59,7 @@
   box-shadow: 0 2px 8px rgba(44, 29, 19, 0.04);
 }
 .hero-section section h2 {
-  color: #c23d1a;
+  color: #e75512;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
@@ -127,7 +127,7 @@
 }
 
 .service-card:hover {
-    background: #c23d1a;
+    background: #e75512;
 }
 
 .service-img {
@@ -152,7 +152,7 @@
 }
 
 .service-card p {
-  color: #c23d1a;
+  color: #e75512;
   font-size: 1rem;
   margin: 0;
   transition: color 0.2s;
