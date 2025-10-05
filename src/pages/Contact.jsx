@@ -16,7 +16,7 @@ export default function Contact() {
 
     try {
       const formData = new FormData(e.target);
-      const res = await fetch("/Contact", {
+      const res = await fetch("/contact", {
         method: "POST",
         body: formData,
       });
@@ -43,7 +43,7 @@ export default function Contact() {
       <form
         name="contact"
         method="POST"
-        action="/Contact"
+        action="/contact"
         data-netlify="true"
         netlify-honeypot="bot-field"
         className="form"
