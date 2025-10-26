@@ -21,21 +21,21 @@ export default function Home() {
             <div className="home-featured">
                 <h2> Featured Projects </h2>
                 <div className="feature-buttons">
-                    <Link to="/project/alpha" className="feature-btn" aria-label="Project Alpha">
+                    <Link to="/Portfolio" className="feature-btn" aria-label="Project Alpha">
                         <div className="feature-img">
                             <img src="/feature-1.jpg" alt="Project Alpha" />
                         </div>
                         <span className="feature-label">Project Alpha</span>
                     </Link>
 
-                    <Link to="/project/beta" className="feature-btn" aria-label="Project Beta">
+                    <Link to="/Portfolio" className="feature-btn" aria-label="Project Beta">
                         <div className="feature-img">
                             <img src="/feature-2.jpg" alt="Project Beta" />
                         </div>
                         <span className="feature-label">Project Beta</span>
                     </Link>
 
-                    <Link to="/project/gamma" className="feature-btn" aria-label="Project Gamma">
+                    <Link to="/Portfolio" className="feature-btn" aria-label="Project Gamma">
                         <div className="feature-img">
                             <img src="/feature-3.jpg" alt="Project Gamma" />
                         </div>
