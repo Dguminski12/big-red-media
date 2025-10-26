@@ -19,16 +19,24 @@
   display: flex;
   flex-direction: column;
   box-shadow: 0 2px 8px rgba(44, 29, 19, 0.08);
+  min-height: 360px; /* ensure body area is always visible */
+  box-sizing: border-box;
+  overflow: visible !important; /* ensure nothing clipped */
 }
 
+.card > a,
 .card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
+  position: relative !important;
+  z-index: 0 !important;    /* keep image behind the body */
   display: block;
+}
+
+/* Use a fixed image band so images don't grow unpredictably */
+.card img {
+  height: 220px !important;
+  width: 100% !important;
+  object-fit: cover !important;
   border-radius: 8px 8px 0 0;
-  background: #fff8f3;
-  border-bottom: 2px solid #e7551222;
 }
 
 .card-body {
@@ -36,6 +44,16 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  position: relative;
+  z-index: 2;
+  justify-content: space-between;
+}
+
+.card-body {
+  position: relative !important;
+  z-index: 5 !important;        /* above image/anchors */
+  pointer-events: auto !important;
+  background: transparent !important;
 }
 
 .card-title {
@@ -92,6 +110,17 @@
   margin: 12px 0 0 0;          /* space above button */
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
   cursor: pointer;
+  position: relative;
+  z-index: 3;
+}
+
+.card .btn {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 9999 !important;     /* guarantee it's above everything */
+  margin-top: 12px !important;
 }
 
 .card:hover .btn {
@@ -154,4 +183,16 @@
 .card:hover .btn a {
   background-color: #2b1a13 !important;
   color: #e9ceb2 !important;
+}
+
+/* safety: if any anchor was made absolutely positioned elsewhere, reset it */
+.card > a.card-link {
+  position: static !important;
+}
+
+/* In case an anchor is overlaying the whole card, stop it covering the button */
+.card > a {
+  position: static !important;
+  z-index: 0 !important;
+  pointer-events: auto !important;
 }

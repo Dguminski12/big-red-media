@@ -1,47 +1,79 @@
 // src/pages/Project.jsx
-import { useParams, Link } from "react-router-dom";
-import { projects } from "../data/projects.js";
-import "../assets/styles/details.css"
+import { useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { projects } from "../data/projects";
+import "../assets/styles/details.css";
 
-export default function Project() {
+export default function ProjectDetails() {
   const { id } = useParams();
-  const project = projects.find(p => p.id === id);
+  const project = projects.find((p) => p.id === id);
 
-  if (!project) {
-    return (
-      <section className="project">
-        <h1>Project not found</h1>
-        <p>We couldn’t find that case study.</p>
-        <Link className="btn btn-outline" to="/work">Back to Portfolio</Link>
-      </section>
-    );
-  }
+  // build a clean image list: remove falsy entries, dedupe, keep sensible max
+  const raw = project?.images ?? (project ? [project.image] : []);
+  const images = Array.isArray(raw)
+    ? [...new Set(raw.filter(Boolean))].slice(0, 12) // dedupe & cap
+    : raw
+    ? [raw]
+    : [];
+
+  const [selected, setSelected] = useState(images[0] || null);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
+  if (!project) return <div style={{ padding: 24 }}>Project not found.</div>;
 
   return (
-    <section className="project">
-      <Link className="back-link" to="/Portfolio">← Back to Portfolio</Link>
+    <div className="project-page">
+      <div className="project">
+        <Link to="/Portfolio" className="back-link">← Back to Portfolio</Link>
+        <h1 className="project-title">{project.title}</h1>
+        <div className="project-meta">{project.year} • {project.tags?.join(", ")}</div>
 
-      <h1 className="project-title">{project.title}</h1>
-      <p className="project-meta">
-        {project.year} • {project.tags.join(" • ")}
-      </p>
+        <div className="gallery">
+          <button
+            className="main-img-btn"
+            onClick={() => setLightboxOpen(true)}
+            aria-label="Open image"
+          >
+            <img
+              src={selected}
+              alt={project.title}
+              className="project-hero main-img"
+            />
+          </button>
 
-      {project.hero ? (
-        <img className="project-hero" src={project.hero} alt={project.title} loading="lazy" />
-      ) : (
-        <img className="project-hero" src={project.image} alt={project.title} loading="lazy" />
-      )}
+          <div className="thumbs" role="list">
+            {images.map((src) => (
+              <button
+                key={src}
+                className={`thumb ${src === selected ? "active" : ""}`}
+                onClick={() => setSelected(src)}
+                aria-label="Show image"
+              >
+                <img src={src} alt="" />
+              </button>
+            ))}
+          </div>
+        </div>
 
-      <p className="project-summary">{project.summary || project.blurb}</p>
+        <p className="project-summary">{project.summary}</p>
 
-      {project.deliverables?.length > 0 && (
         <div className="project-deliverables">
           <h3>Deliverables</h3>
           <ul>
-            {project.deliverables.map(item => <li key={item}>{item}</li>)}
+            {project.deliverables?.map((d) => <li key={d}>{d}</li>)}
           </ul>
         </div>
-      )}
-    </section>
+
+        {/* Lightbox */}
+        {lightboxOpen && (
+          <div className="lightbox" onClick={() => setLightboxOpen(false)}>
+            <div className="lightbox-inner" onClick={(e) => e.stopPropagation()}>
+              <button className="lightbox-close" onClick={() => setLightboxOpen(false)} aria-label="Close">✕</button>
+              <img src={selected} alt={project.title} />
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }

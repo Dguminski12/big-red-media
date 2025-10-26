@@ -1,11 +1,28 @@
+/* color tokens - swap/lighten overall look */
+:root {
+  --bg-light: #e9ceb2; /* lighter container colour */
+  --bg-dark:  #2b1a13; /* page background / accent (brown) */
+  --accent:   #e75512;
+  --muted:    #fff8f3;
+}
+
+/* Page wrapper: only for project details page */
+.project-page {
+  background: var(--bg-dark);  /* full-page brown */
+  min-height: 100vh;
+  padding: 48px 0;             /* spacing top/bottom so .project sits centered */
+  box-sizing: border-box;
+}
+
 /* --- Details Page Container --- */
 .project {
-  max-width: 700px;
+  max-width: 1100px; /* increased from 700px */
   margin: 48px auto 32px auto;
-  background: #2b1a13;
+  background: var(--bg-light);
+  color: var(--bg-dark);
   border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(44, 29, 19, 0.08);
-  padding: 2rem 2rem 2rem 2rem;
+  box-shadow: 0 4px 24px rgba(43,26,15,0.06);
+  padding: 2.5rem; /* slightly more breathing room */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,8 +30,8 @@
 
 /* --- Back Link --- */
 .project .back-link {
-  color: #e75512;
-  background-color: #e9ceb2;
+  color: var(--bg-light);
+  background-color: var(--bg-dark);
   border-radius: 18px;
   padding: 8px 16px;
   text-decoration: none;
@@ -32,13 +49,13 @@
   margin: 8px 0 4px 0;
   font-size: 2rem;
   font-weight: 800;
-  color: #e9ceb2;
+  color: var(--bg-dark);
   text-align: center;
 }
 
 /* --- Meta --- */
 .project-meta {
-  color: #e75512;
+  color: var(--accent);
   margin-bottom: 16px;
   font-size: 1rem;
   text-align: center;
@@ -47,14 +64,14 @@
 /* --- Hero Image --- */
 .project-hero {
   width: 100%;
-  max-width: 480px;
-  max-height: 320px;
-  object-fit: cover;
+  max-width: 960px; /* wider hero */
+  max-height: 560px; /* allow taller display if needed */
+  object-fit: contain; /* preserve full image */
   border-radius: 12px;
-  border: 2px solid #2b1a13;
+  border: 2px solid rgba(43,26,15,0.06);
   margin: 18px 0 24px 0;
-  background: #fff8f3;
-  box-shadow: 0 2px 8px rgba(44, 29, 19, 0.08);
+  background: transparent;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
   display: block;
 }
 
@@ -62,7 +79,7 @@
 .project-summary {
   font-size: 1.08rem;
   line-height: 1.6;
-  color: #e75512;
+  color: var(--accent);
   margin-bottom: 18px;
   text-align: center;
 }
@@ -83,22 +100,126 @@
 .project-deliverables ul {
   margin: 0 auto;
   padding-left: 18px;
-  color: #e75512;
+  color: var(--muted);
   font-size: 1rem;
-  max-width: 400px;
-  background-color: #e9ceb2;
+  max-width: 800px; /* increased */
+  background-color: var(--bg-dark);
   border-radius: 18px;
   padding: 15px 30px;
   font-weight: 600;
 }
 
+/* --- Gallery layout --- */
+.gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* --- main image button (click to open lightbox) --- */
+.main-img-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: block;
+  cursor: zoom-in;
+}
+.main-img {
+  width: 100%;
+  max-width: 640px;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.32);
+  border: 2px solid #2b1a13;
+}
+
+/* --- thumbnails row --- */
+.thumbs {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 6px 2px;
+  width: 100%;
+  max-width: 960px; /* keep thumbnails aligned with main image */
+  box-sizing: border-box;
+}
+.thumb {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex: 0 0 auto;
+  width: 110px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  border: 2px solid transparent;
+}
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.thumb.active {
+  border-color: var(--accent);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+/* --- Lightbox overlay --- */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 24px;
+}
+.lightbox-inner {
+  max-width: 95%;
+  max-height: 95%;
+  position: relative;
+}
+.lightbox-inner img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+}
+.lightbox-close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--bg-dark);
+  color: var(--bg-light);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
 /* --- Responsive --- */
+@media (max-width: 1100px) {
+  .project { max-width: 92%; padding: 1.5rem; }
+  .project-hero { max-width: 100%; max-height: 480px; }
+  .thumb { width: 88px; height: 58px; }
+}
 @media (max-width: 800px) {
-  .project {
-    padding: 1rem 0.5rem;
-  }
-  .project-hero {
-    max-width: 100%;
-    height: auto;
-  }
-};
+  .project { padding: 1rem 0.5rem; }
+  .project-hero { max-width: 100%; height: auto; }
+  .thumb { width: 72px; height: 48px; }
+}

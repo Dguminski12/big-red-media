@@ -5,9 +5,9 @@
   width: 100%;
   padding: 0.5rem 0;
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
   font-weight: 700;
-  border-radius: 18px;
+  border-radius: 18px 18px 0 0;
   text-align: center;
   letter-spacing: 1px;
 }
@@ -16,7 +16,7 @@
 .work-intro {
   color: #2b1a13;
   background: #e75512;
-  border-radius: 12px;
+  border-radius: 0 0 18px 18px;
   padding: 1rem 1.5rem;
   margin-bottom: 2rem;
   font-size: 1.1rem;
@@ -26,11 +26,49 @@
 }
 
 .work-page {
-  margin-top: 48px;
+  margin-top: 12px;
 }
 
+/* Make portfolio tiles larger and let them fill the page more */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); /* larger tile min width */
+  gap: 1.5rem;
+  align-items: start;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure each tile takes up more vertical space and lays out nicely */
+.grid > * {
+  min-height: 260px;           /* taller tiles */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+/* If your ProjectCard uses an image/thumb inside, ensure it fills the card width */
+.project-card img,
+.project-thumb,
+.grid > * img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* Slightly reduce the page side paddings so tiles can stretch wider */
 .home-featured,
 .home-page {
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+/* Responsive: smaller / fewer columns on narrow screens */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .grid > * { min-height: 180px; }
 }

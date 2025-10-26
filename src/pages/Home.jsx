@@ -8,9 +8,11 @@ export default function Home() {
     return (
         <div className="home-page">
             <div className="hero-section">
-                <h1>Creative media & design that makes brands stand out.</h1>
-                <h2>Affordable design solutions: logos, photo editing, social content, and event banners that connect with your audience.</h2>
-                <p>See my <Link to="/Portfolio">work</Link>, or get in touch <Link to="/Contact">now!</Link></p>
+                <div className="hero-left">
+                    <h1>Creative media & design that makes brands stand out.</h1>
+                    <h2>Affordable design solutions: logos, photo editing, social content, and event banners that connect with your audience.</h2>
+                    <p>See my <Link to="/Portfolio">work</Link>, or get in touch <Link to="/Contact">now!</Link></p>
+                </div>
                 <section>
                     <h2> About Me </h2>
                     <p>Hi, I’m Matthew — I love turning ideas into visuals that shine. Whether it’s designing a new logo, editing photos, or producing social posts and event banners, I help businesses build a strong presence online and offline. I focus on quick turnaround, affordable rates, and designs that fit your unique brand style.</p>
@@ -18,10 +20,27 @@ export default function Home() {
             </div>
             <div className="home-featured">
                 <h2> Featured Projects </h2>
-                <div className="grid">
-                    {projects.slice(0, 6).map((p) => (
-                        <ProjectCard key={p.id} project={p} />
-                    ))}
+                <div className="feature-buttons">
+                    <Link to="/project/alpha" className="feature-btn" aria-label="Project Alpha">
+                        <div className="feature-img">
+                            <img src="/feature-1.jpg" alt="Project Alpha" />
+                        </div>
+                        <span className="feature-label">Project Alpha</span>
+                    </Link>
+
+                    <Link to="/project/beta" className="feature-btn" aria-label="Project Beta">
+                        <div className="feature-img">
+                            <img src="/feature-2.jpg" alt="Project Beta" />
+                        </div>
+                        <span className="feature-label">Project Beta</span>
+                    </Link>
+
+                    <Link to="/project/gamma" className="feature-btn" aria-label="Project Gamma">
+                        <div className="feature-img">
+                            <img src="/feature-3.jpg" alt="Project Gamma" />
+                        </div>
+                        <span className="feature-label">Project Gamma</span>
+                    </Link>
                 </div>
 
                 <div className="view-all">
@@ -34,28 +53,28 @@ export default function Home() {
                 <h2>Services</h2>
                 <div className="services-grid">
                     <div className="service-card">
-                        <img src="/service-logo.png" alt="Logo Design Example" className="service-img" />
+                        <img src="/dsg-1.jpg" alt="Logo Design Example" className="service-img" />
                         <div>
                             <h3>Logo Design</h3>
                             <p>Custom, memorable logos tailored to your brand’s personality and goals.</p>
                         </div>
                     </div>
                     <div className="service-card">
-                        <img src="/service-photo.png" alt="Photo Editing Example" className="service-img" />
+                        <img src="/snoopdogg.jpg" alt="Photo Editing Example" className="service-img" />
                         <div>
                             <h3>Photo Editing</h3>
                             <p>Professional retouching and enhancement to make your images stand out.</p>
                         </div>
                     </div>
                     <div className="service-card">
-                        <img src="/service-social.png" alt="Social Media Content Example" className="service-img" />
+                        <img src="/sports-club-6.jpg" alt="Social Media Content Example" className="service-img" />
                         <div>
                             <h3>Social Media Content</h3>
                             <p>Eye-catching graphics and posts designed for engagement and brand consistency.</p>
                         </div>
                     </div>
                     <div className="service-card">
-                        <img src="/service-event.png" alt="Event Media Example" className="service-img" />
+                        <img src="/sports-club-2.jpg" alt="Event Media Example" className="service-img" />
                         <div>
                             <h3>Event Media (Banners, Ads)</h3>
                             <p>Bold banners and ads for events, promotions, and campaigns.</p>
