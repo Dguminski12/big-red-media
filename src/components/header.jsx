@@ -9,7 +9,7 @@ export default function header ({logoSrc}) {
             <Link to="/Home">
                 <img className="logo" src={logoSrc} alt="Big Red Media Logo" />
             </Link>
-            <Link to="/Store" className="menu-btn">Store</Link>
+            <Link to="/Pricing" className="menu-btn">Pricing</Link>
             <Link to="/Contact" className="menu-btn">Contact</Link>
         </header>
     )

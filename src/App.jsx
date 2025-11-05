@@ -7,8 +7,8 @@ import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Project from "./pages/Project";
-import Testimonials from './pages/Testimonials';
-import Store from './pages/Store';
+import Testimonials from "./pages/Testimonials";
+import Pricing from "./pages/Pricing";
 
 
 function App() {
@@ -23,8 +23,8 @@ function App() {
           <Route path="/Portfolio" element= {<Portfolio />} />
           <Route path="/Portfolio/:id" element={<Project />} />
           <Route path="/Contact" element= {<Contact />} />
+          <Route path="/Pricing" element={<Pricing />} />
           <Route path="/Testimonials" element= {<Testimonials />} />
-          <Route path="/Store" element= {<Store />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>
