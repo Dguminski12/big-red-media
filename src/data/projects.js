@@ -48,59 +48,62 @@ export const projects = [
     year: 2025
   },
   {
-    id: "social-posts-cafe",
-    title: "Café Social Content",
-    image: "/images/social-cafe.jpg",
+    id: "baby-shower-package",
+    title: "Events - Baby Shower Package",
+    image: "/baby-shower/aft-tea.jpg",
     images: [
-      "/images/social-cafe.jpg",
-      "/images/social-cafe-hero.jpg",
-      "/images/social-cafe-detail1.jpg"
+      "/baby-shower/aft-tea.jpg",
+      "/baby-shower/baby-bingo.jpg",
+      "/baby-shower/baby-predict.jpg",
+      "/baby-shower/choc-score-sheet.jpg",
+      "/baby-shower/daddy-best.jpg",
+      "/baby-shower/find-the-guest.jpg",
+      "/baby-shower/guess-food.jpg",
+      "/baby-shower/how-many-jars.jpg",
+      "/baby-shower/itinerary.jpg",
+      "/baby-shower/intineraryA4A5.jpg",
+      "/baby-shower/jar-labels-1-5.jpg",
+      "/baby-shower/mummybest.jpg",
+      "/baby-shower/mummy-or-daddy.jpg",
+      "/baby-shower/template.jpg"
     ],
-    tags: ["Social", "Photo Editing"],
-    blurb: "High-contrast edits + post templates for weekly promos.",
+    tags: ["Events", "Print Design", "Invitations", "Party Pack", "Templates", "Stationery"],
+    blurb: "A complete printable baby-shower suite: itinerary, games, bingo and editable templates ready for print and socials.",
     url: "#",
-    hero: "/images/logo-pack-hero.jpg",
-    summary: "A crisp, versatile logo system designed for socials and print.",
-    deliverables: ["Primary logo", "Alt mark", "Brand colors", "Social templates"],
+    hero: "",
+    summary: "A cohesive baby-shower collateral package created for easy printing and on-the-day use. The set includes an elegant itinerary, multiple game sheets (Who knows Mummy/Daddy, Find the Guest, Baby Predictions, Guess the Chocolates, Baby Bingo, Name/Guess sheets and more), plus large-format headers for signage. All pages are produced as high-resolution, print-ready files with bleed and crop marks and also exported as web-optimized assets for social sharing. Files are delivered with editable source masters so organisers can personalise text, dates and prize details.",
+    deliverables: [
+      "Multi-page print-ready PDF (A4) with crop marks & bleed",
+      "Individual game sheets: Itinerary, Baby Bingo, Baby Predictions, Find the Guest, Mummy/Daddy quiz, Guess the Baby Food, Guess the Chocolates, Name & Guess sheets",
+      "Large header/signage pages (print-ready)",
+      "Editable source files (AI, PSD or layered PDF)",
+      "High-resolution PNG/JPEG exports (300dpi) for print",
+      "Web-optimised exports for Instagram/Facebook (stories & posts)",
+      "Font list and usage notes (with links) + short brand/style guide",
+      "Printing & assembly notes (paper weight, trim, layout)",
+      "Customisation instructions so organisers can edit names/dates"
+    ],
     year: 2025
   },
   {
-    id: "logo-pack-s122",
-    title: "Logo Pack for S12 Fitness",
-    image: "/images/logo-pack.jpg",
-    tags: ["Logo", "Brand"],
-    blurb: "Clean mark + typography set for social and print.",
+    id: "snoop-dogg",
+    title: "Snoop Photo blend + Edit",
+    image: "/snoop-dogg/snoop-1.jpg",
+    tags: ["Photo Retouch", "Digital Compositing", "Portrait", "Photo Manipulation", "Typography", "3D Lettering", "Branding"],
+    blurb: "A high-impact portrait composite combining precision masking, textured apparel, and metallic 3D typography for a striking promotional image.",
     url: "#",
     // detail fields:
-    hero: "/images/logo-pack-hero.jpg",     // optional big image
-    summary: "A crisp, versatile logo system designed for socials and print.",
-    deliverables: ["Primary logo", "Alt mark", "Brand colors", "Social templates"],
-    year: 2025
-  },
-  {
-    id: "event-banners-fest2",
-    title: "Summer Fest Event Banners",
-    image: "/images/event-banner.jpg",
-    tags: ["Banners", "Ads"],
-    blurb: "A suite of outdoor banners and paid ads for an event.",
-    url: "#",
-    // detail fields:
-    hero: "/images/logo-pack-hero.jpg",     // optional big image
-    summary: "A crisp, versatile logo system designed for socials and print.",
-    deliverables: ["Primary logo", "Alt mark", "Brand colors", "Social templates"],
-    year: 2025
-  },
-  {
-    id: "social-posts-cafe2",
-    title: "Café Social Content",
-    image: "/images/social-cafe.jpg",
-    tags: ["Social", "Photo Editing"],
-    blurb: "High-contrast edits + post templates for weekly promos.",
-    url: "#",
-    // detail fields:
-    hero: "/images/logo-pack-hero.jpg",     // optional big image
-    summary: "A crisp, versatile logo system designed for socials and print.",
-    deliverables: ["Primary logo", "Alt mark", "Brand colors", "Social templates"],
+    hero: "",     // optional big image
+    summary: "Stylised portrait composite produced with advanced photo-masking, layered lighting and glow effects to integrate the subject with a textured, leafy background. The piece pairs detailed color correction and depth work with custom 3D-styled lettering and bevel/emboss treatments to deliver a cinematic, premium look suitable for promotional and editorial use.",
+    deliverables: [
+      "Layered PSD (fully organised layers & adjustment groups)",
+      "High-resolution JPG / PNG exports (print & web variants)",
+      "Transparent cutout PNG for flexible layout use",
+      "3D typography source (layer styles or editable smart objects)",
+      "Color-graded master and alternate tonal variants",
+      "Web/social optimised sizes (Instagram, cover/banner, thumbnails)",
+      "Editing notes: fonts, layer effects and blend-mode documentation"
+    ],
     year: 2025
   }
 ];
