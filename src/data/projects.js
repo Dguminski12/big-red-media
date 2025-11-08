@@ -105,5 +105,23 @@ export const projects = [
       "Editing notes: fonts, layer effects and blend-mode documentation"
     ],
     year: 2025
+  },
+    {
+    id: "image-enchancement",
+    title: "Image Enchancement of blurry photo",
+    image: "/pic-restore/ench-2.jpeg",
+    images: ["/pic-restore/ench-1.jpeg", "/pic-restore/ench-2.jpeg"],
+    tags: ["Photo Retouch", "Calirty improvement", "Image Restoration", "Photo Manipulation"],
+    blurb: "Customer asked to try improve the clarity of a small blurry image.",
+    url: "#",
+    // detail fields:
+    hero: "",  
+    summary: "Using a combination of advanced sharpening techniques, noise reduction, and detail enhancement tools to improve the clarity and overall quality of the original blurry photo. The process involved careful adjustments to preserve natural textures while enhancing key features for a more defined appearance.",
+    deliverables: [
+      "High-resolution JPG / PNG exports (print & web variants)",
+      "Before and after comparison images",
+      "Editing notes: techniques and tools used for enhancement"
+    ],
+    year: 2025
   }
 ];
