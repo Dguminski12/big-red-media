@@ -1,62 +1,102 @@
-# Big Red Media
+# Big Red Media – Portfolio Website  
+*A modern, visually-driven portfolio site built for a creative media brand.*
 
-Big Red Media is a Vite-powered React single-page experience showcasing the agency's services, portfolio highlights, and testimonials. The app is structured around modular components and routed pages so new sections or campaigns can be shipped quickly.
+## 🎨 Overview
+Big Red Media is a showcase website designed for a creative brand specialising in digital art, sports graphics, branding, and visual media.  
+This project demonstrates the ability to build sleek, responsive web experiences using modern web tooling while translating a real client’s style and personality into a digital product.
 
-## Getting Started
+The site focuses on:
+- Strong, bold visual identity  
+- Smooth user experience  
+- Responsive layouts  
+- Easy future expansion (projects, galleries, contact forms, etc.)
 
-1. Install dependencies:
-   ```bash
-   npm install
-   ```
-2. Start the local development server with hot module reloading:
-   ```bash
-   npm run dev
-   ```
-   By default Vite serves the app at [http://localhost:5173](http://localhost:5173). The terminal output will confirm the active port if it differs.
+---
 
-## Available Scripts
+## 🚀 Tech Stack
+| Area | Technology |
+|------|------------|
+| Framework | React (or update if plain HTML/Tailwind) |
+| Styling | Tailwind CSS |
+| Tooling | Vite |
+| Deployment | Netlify |
+| Assets | Custom graphics + branding elements |
 
-The project uses standard Vite and ESLint npm scripts. Run them with `npm run <script>`:
+---
 
-| Script | Description |
-| ------ | ----------- |
-| `dev` | Launches the Vite development server with HMR enabled. |
-| `build` | Produces an optimized production bundle in the `dist/` directory. |
-| `preview` | Serves the built assets locally to verify the production bundle. Run `npm run build` first. |
-| `lint` | Lints all source files with the configured ESLint rules. |
+## 📁 Key Features
+- 💎 **Bold and impactful brand design** tailored to Big Red Media’s creative style.  
+- 📱 **Fully responsive layout** — optimised for desktop, tablet and mobile.  
+- 🖼️ **Media gallery sections** — perfect for showcasing artwork, posters, sports graphics and more.  
+- 🎯 **Simple navigation & UX** — lightweight, modern, and fast-loading.  
+- 📨 **Contact section** for enquiries and potential clients.  
+- 🔧 **Modular and extendable** — easy to add new galleries, CMS features, or forms.
 
-### Linting Guidance
+---
 
-Use `npm run lint` during development or in CI to catch common React, hooks, and accessibility issues. ESLint is configured via `eslint.config.js` and extends the official React recommendations.
+## 🗂️ Project Structure
+big-red-media/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   └── styles/
+├── public/
+├── package.json
+└── README.md
 
-## Dependencies
+## 🧱 Development Setup
 
-Runtime dependencies:
-- [`react`](https://react.dev/) and [`react-dom`](https://react.dev/reference/react-dom) for building the UI.
-- [`react-router-dom`](https://reactrouter.com/) for client-side routing between pages.
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/big-red-media.git
+cd big-red-media
 
-Key development dependencies:
-- [`vite`](https://vitejs.dev/) for the dev server and build tooling.
-- [`@vitejs/plugin-react`](https://github.com/vitejs/vite-plugin-react) for fast-refresh and JSX transform support.
-- [`eslint`](https://eslint.org/) with the React Hooks and React Refresh plugins to enforce code quality.
+### 2. Install Dependencies
+npm install
 
-## Directory Layout
+### 3. Run development server
+npm run dev
 
-```
-src/
-├── pages/         # Route-level views such as Home, Portfolio, and Pricing
-├── components/    # Reusable UI building blocks shared across pages
-├── data/          # Structured content and configuration consumed by components
-├── assets/        # Imported images, icons, and other bundled media
-├── styles.css     # Global styles applied across the application
-└── main.jsx       # App bootstrap and router mounting point
-public/            # Static assets served as-is (favicons, manifest, etc.)
-```
+### 4. Build for production
+npm run build
 
-## Deployment & Asset Notes
+🌐 Deployment
 
-- Build optimized production assets with `npm run build`. Deploy the generated `dist/` directory to your static host or CDN.
-- Assets in `public/` are copied to the root of the build output without processing. Reference them with absolute paths (e.g., `/logo.svg`).
-- Assets imported from `src/assets/` are processed by Vite, allowing you to benefit from hashing and tree-shaking.
-- Use `npm run preview` locally to validate the production build before deployment.
+This project can be deployed on:
 
+Netlify
+
+Vercel
+
+Hostinger
+
+GitHub Pages (if static)
+
+If using Netlify or Vercel, just connect the repo and let the platform handle builds automatically.
+
+🎯 Roadmap
+
+Planned future improvements:
+
+🖼️ Dynamic project/gallery pages
+
+🎥 Motion graphics or reel demos
+
+✉️ Contact form with email automations
+
+💼 Downloadable portfolio PDF
+
+⚙️ Optional CMS integration (Sanity / WordPress Headless)
+
+🤝 Credits
+
+Design & Development: DSG Development
+
+Brand: Big Red Media (client project)
+
+📬 Contact
+
+For collaboration, freelance work, or enquiries:
+
+GitHub: https://github.com/Dguminski12
