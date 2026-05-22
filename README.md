@@ -1,22 +1,36 @@
-# Big Red Media – Portfolio Website  
-*A modern, visually-driven portfolio site built for a creative media brand.*
+# Big Red Media – Demo Portfolio Website
+
+*A modern, visually-driven portfolio website created as a frontend learning and portfolio project.*
+
+> ## Important Notice
+> This repository is a personal development and showcase project.
+> Big Red Media is not an active registered business or production client platform.
+> The website exists purely as a demonstration of frontend development, UI/UX design, branding, and responsive layout skills.
+
+---
 
 ## 🎨 Overview
-Big Red Media is a showcase website designed for a creative brand specialising in digital art, sports graphics, branding, and visual media.  
-This project demonstrates the ability to build sleek, responsive web experiences using modern web tooling while translating a real client’s style and personality into a digital product.
 
-The site focuses on:
-- Strong, bold visual identity  
-- Smooth user experience  
-- Responsive layouts  
-- Easy future expansion (projects, galleries, contact forms, etc.)
+Big Red Media is a showcase website concept designed around a creative media brand aesthetic focused on digital art, sports graphics, branding, and visual media.
+
+The goal of this project is to practice:
+
+- Modern frontend development
+- Responsive website design
+- Brand-focused UI/UX
+- Component-based React architecture
+- Tailwind CSS workflows
+- Deployment and production-style project structure
+
+This project was built as part of personal learning and portfolio development.
 
 ---
 
 ## 🚀 Tech Stack
+
 | Area | Technology |
 |------|------------|
-| Framework | React (or update if plain HTML/Tailwind) |
+| Framework | React |
 | Styling | Tailwind CSS |
 | Tooling | Vite |
 | Deployment | Netlify |
@@ -25,16 +39,20 @@ The site focuses on:
 ---
 
 ## 📁 Key Features
-- 💎 **Bold and impactful brand design** tailored to Big Red Media’s creative style.  
-- 📱 **Fully responsive layout** — optimised for desktop, tablet and mobile.  
-- 🖼️ **Media gallery sections** — perfect for showcasing artwork, posters, sports graphics and more.  
-- 🎯 **Simple navigation & UX** — lightweight, modern, and fast-loading.  
-- 📨 **Contact section** for enquiries and potential clients.  
-- 🔧 **Modular and extendable** — easy to add new galleries, CMS features, or forms.
+
+- Responsive modern layout
+- Portfolio/gallery style sections
+- Animated and visually-driven design
+- Reusable React component structure
+- Fast-loading frontend build
+- Mobile-friendly UI
+- Expandable architecture for future features
 
 ---
 
 ## 🗂️ Project Structure
+
+```txt
 big-red-media/
 ├── src/
 │   ├── components/
@@ -44,59 +62,64 @@ big-red-media/
 ├── public/
 ├── package.json
 └── README.md
+```
+
+---
 
 ## 🧱 Development Setup
 
-### 1. Clone the repository
+### Clone the repository
+
 ```bash
-git clone https://github.com/yourusername/big-red-media.git
+git clone https://github.com/Dguminski12/big-red-media.git
 cd big-red-media
+```
 
-### 2. Install Dependencies
+### Install dependencies
+
+```bash
 npm install
+```
 
-### 3. Run development server
+### Run development server
+
+```bash
 npm run dev
+```
 
-### 4. Build for production
+### Build for production
+
+```bash
 npm run build
+```
 
-🌐 Deployment
+---
 
-This project can be deployed on:
+## 🌐 Deployment
 
-Netlify
+This project can be deployed using:
 
-Vercel
+- Netlify
+- Vercel
+- GitHub Pages
+- Other static hosting providers
 
-Hostinger
+---
 
-GitHub Pages (if static)
+## 🎯 Learning Goals
 
-If using Netlify or Vercel, just connect the repo and let the platform handle builds automatically.
+This project was created to improve experience with:
 
-🎯 Roadmap
+- React development
+- Tailwind CSS
+- Responsive design
+- Frontend project structure
+- Component architecture
+- Modern deployment workflows
+- Portfolio-quality UI design
 
-Planned future improvements:
+---
 
-🖼️ Dynamic project/gallery pages
-
-🎥 Motion graphics or reel demos
-
-✉️ Contact form with email automations
-
-💼 Downloadable portfolio PDF
-
-⚙️ Optional CMS integration (Sanity / WordPress Headless)
-
-🤝 Credits
-
-Design & Development: DSG Development
-
-Brand: Big Red Media (client project)
-
-📬 Contact
-
-For collaboration, freelance work, or enquiries:
+## 📬 Contact
 
 GitHub: https://github.com/Dguminski12
